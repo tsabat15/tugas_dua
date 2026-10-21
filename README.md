@@ -55,7 +55,7 @@ Kategori dibeli : {Kopi, Teh, Makanan}
 
 ### Skenario 2 — pesanan mengandung kode salah
 
-Input: `P01x2, P99x1, P03xdua, p04X1, P02-3, P07x0, P01x1`
+Input: `P01x2, P99x1, P03xdua`
 
 ![Pesanan dengan kode salah](screenshots/kode_salah.png)
 
@@ -63,22 +63,24 @@ Input: `P01x2, P99x1, P03xdua, p04X1, P02-3, P07x0, P01x1`
 ====================================================
 STRUK BELANJA
 ====================================================
-3 x Rp45.000  Kopi Sidikalang 250 g        Rp135.000
-1 x Rp30.000  Gula Aren 500 g               Rp30.000
+2 x Rp45.000  Kopi Sidikalang 250 g         Rp90.000
 ----------------------------------------------------
-Total                                      Rp165.000
-Diskon 10%                                 -Rp16.500
-Jumlah bayar                               Rp148.500
+Total                                       Rp90.000
+Diskon 10%                                      -Rp0
+Jumlah bayar                                Rp90.000
 ----------------------------------------------------
-Kategori dibeli : {Kopi, Pemanis}
+Kategori dibeli : {Kopi}
+Belanja Rp10.000 lagi untuk diskon 10%.
 ----------------------------------------------------
-Item ditolak (4):
+Item ditolak (2):
   - P99x1 (kode P99 tidak ada di katalog)
   - P03xdua (jumlah tidak valid)
-  - P02-3 (format salah, gunakan KODExJUMLAH)
-  - P07x0 (jumlah tidak valid)
 ====================================================
 ```
+
+Kode `P99` tidak ada di katalog dan jumlah `dua` bukan angka, tetapi program
+tidak crash: keduanya dicatat sebagai item ditolak dan pesanan lain tetap
+diproses.
 
 ## c. Penjelasan: var, final, const, dan null safety
 
