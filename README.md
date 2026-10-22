@@ -104,7 +104,7 @@ kode yang baru pertama kali muncul belum punya nilai.
 
 ## d. Pernyataan penggunaan AI
 
-Saya menggunakan asisten AI (Claude, di VS Code) untuk:
+Saya menggunakan asisten AI untuk:
 
 - memasang Dart SDK 3.13.4 dan membuat proyek console;
 - menyusun `bin/kasir.dart` dari kerangka awal modul (TODO 1–5), termasuk
